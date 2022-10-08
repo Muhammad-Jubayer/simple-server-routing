@@ -3,7 +3,7 @@ const fs = require("fs");
 
 http
   .createServer((req, res) => {
-    console.log(req.url);
+    
     function show(fileLocation, statusCode = 200) {
       fs.readFile(fileLocation, (err, data) => {
         res.writeHead(statusCode, { "content-type": "text/html" });
@@ -23,5 +23,5 @@ http
     }
   })
   .listen(3000, () => {
-    console.log("success");
+    console.log("Success");
   });
