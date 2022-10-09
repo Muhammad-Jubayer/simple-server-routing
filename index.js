@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
 
+const port = process.env.PORT;
+
 http
   .createServer((req, res) => {
     
@@ -22,6 +24,6 @@ http
       show("View/err.html");
     }
   })
-  .listen(3000, () => {
+  .listen(port, () => {
     console.log("Success");
   });
